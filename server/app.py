@@ -18,7 +18,7 @@ def show_session(key):
             'session_accessed': session.accessed,
         },
         'cookies': [{cookie: request.cookies[cookie]}
-            for cookie in request.cookies],
+                    for cookie in request.cookies],
     }), 200)
 
     response.set_cookie('mouse', 'Cookie')
@@ -27,4 +27,3 @@ def show_session(key):
 
 if __name__ == '__main__':
     app.run(port=5555)
-    
